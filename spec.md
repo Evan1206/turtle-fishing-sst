@@ -263,7 +263,10 @@ outputs/web/summary.json
   時會對照這份清單。
 
 **部署**：靜態託管（GitHub Pages / Cloudflare Pages 皆可）。**實際對外發布（產生
-公開網址）需人確認後才執行**，不由 Codex 自行部署上線。
+公開網址）需人確認後才執行**，不由 Codex 自行部署上線。網站上線後，Codex 重新
+產生 `outputs/web/*.json` 可以自己 `git add`/`git commit`（本機可逆動作），
+**但不可 `git push`**——push 會讓變更立刻反映在公開網址上，等同對外發布，
+一樣需要人確認後才執行。
 
 ---
 
