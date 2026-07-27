@@ -77,21 +77,27 @@
             role="application"
             aria-label="北太平洋漁船作業強度與海龜定位互動地圖"
           ></div>
-          <div class="legend" aria-label="漁船作業強度圖例">
-            <div class="legend-heading">
-              <strong><span aria-hidden="true">⛵</span> 漁船作業</strong>
-              <span>小時／格／週 · 對數色階</span>
+          <details class="legend" aria-label="漁船作業強度圖例">
+            <summary class="legend-toggle">
+              <span><span aria-hidden="true">⛵</span> 圖例</span>
+              <span class="legend-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="legend-content">
+              <div class="legend-heading">
+                <strong><span aria-hidden="true">⛵</span> 漁船作業</strong>
+                <span>小時／格／週 · 對數色階</span>
+              </div>
+              <div class="legend-ramp" aria-hidden="true"></div>
+              <div class="legend-scale">
+                <span>低<br><b id="legend-min">0</b></span>
+                <span>高<br><b id="legend-max">0</b></span>
+              </div>
+              <div class="legend-turtle">
+                <span class="turtle-dot" aria-hidden="true">🐢</span>
+                海龜定位資料（大小＝點數）
+              </div>
             </div>
-            <div class="legend-ramp" aria-hidden="true"></div>
-            <div class="legend-scale">
-              <span>低<br><b id="legend-min">0</b></span>
-              <span>高<br><b id="legend-max">0</b></span>
-            </div>
-            <div class="legend-turtle">
-              <span class="turtle-dot" aria-hidden="true">🐢</span>
-              海龜定位資料（大小＝點數）
-            </div>
-          </div>
+          </details>
           <div id="loading-state" class="loading-state" role="status">
             <div class="loading-boat" aria-hidden="true">⛵</div>
             <strong>小船正在載入歷史資料…</strong>
