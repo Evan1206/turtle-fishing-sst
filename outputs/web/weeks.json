@@ -1,0 +1,643 @@
+{
+  "grid_deg": 0.25,
+  "max_fishing_hours": 17628.619444444445,
+  "n_rows": 267580,
+  "weeks": [
+    {
+      "time_bin": "2016-12-26",
+      "path": "weeks/2016-12-26.json",
+      "row_count": 570,
+      "bytes": 70911
+    },
+    {
+      "time_bin": "2017-01-02",
+      "path": "weeks/2017-01-02.json",
+      "row_count": 1661,
+      "bytes": 206082
+    },
+    {
+      "time_bin": "2017-01-09",
+      "path": "weeks/2017-01-09.json",
+      "row_count": 1392,
+      "bytes": 172787
+    },
+    {
+      "time_bin": "2017-01-16",
+      "path": "weeks/2017-01-16.json",
+      "row_count": 1381,
+      "bytes": 171681
+    },
+    {
+      "time_bin": "2017-01-23",
+      "path": "weeks/2017-01-23.json",
+      "row_count": 1501,
+      "bytes": 186432
+    },
+    {
+      "time_bin": "2017-01-30",
+      "path": "weeks/2017-01-30.json",
+      "row_count": 1404,
+      "bytes": 174319
+    },
+    {
+      "time_bin": "2017-02-06",
+      "path": "weeks/2017-02-06.json",
+      "row_count": 1480,
+      "bytes": 184012
+    },
+    {
+      "time_bin": "2017-02-13",
+      "path": "weeks/2017-02-13.json",
+      "row_count": 1735,
+      "bytes": 215852
+    },
+    {
+      "time_bin": "2017-02-20",
+      "path": "weeks/2017-02-20.json",
+      "row_count": 1672,
+      "bytes": 207971
+    },
+    {
+      "time_bin": "2017-02-27",
+      "path": "weeks/2017-02-27.json",
+      "row_count": 1604,
+      "bytes": 199457
+    },
+    {
+      "time_bin": "2017-03-06",
+      "path": "weeks/2017-03-06.json",
+      "row_count": 1623,
+      "bytes": 202027
+    },
+    {
+      "time_bin": "2017-03-13",
+      "path": "weeks/2017-03-13.json",
+      "row_count": 1565,
+      "bytes": 195135
+    },
+    {
+      "time_bin": "2017-03-20",
+      "path": "weeks/2017-03-20.json",
+      "row_count": 1489,
+      "bytes": 185405
+    },
+    {
+      "time_bin": "2017-03-27",
+      "path": "weeks/2017-03-27.json",
+      "row_count": 1780,
+      "bytes": 221834
+    },
+    {
+      "time_bin": "2017-04-03",
+      "path": "weeks/2017-04-03.json",
+      "row_count": 1991,
+      "bytes": 247908
+    },
+    {
+      "time_bin": "2017-04-10",
+      "path": "weeks/2017-04-10.json",
+      "row_count": 2230,
+      "bytes": 277993
+    },
+    {
+      "time_bin": "2017-04-17",
+      "path": "weeks/2017-04-17.json",
+      "row_count": 2286,
+      "bytes": 285039
+    },
+    {
+      "time_bin": "2017-04-24",
+      "path": "weeks/2017-04-24.json",
+      "row_count": 2441,
+      "bytes": 304203
+    },
+    {
+      "time_bin": "2017-05-01",
+      "path": "weeks/2017-05-01.json",
+      "row_count": 2379,
+      "bytes": 295543
+    },
+    {
+      "time_bin": "2017-05-08",
+      "path": "weeks/2017-05-08.json",
+      "row_count": 2594,
+      "bytes": 322605
+    },
+    {
+      "time_bin": "2017-05-15",
+      "path": "weeks/2017-05-15.json",
+      "row_count": 2417,
+      "bytes": 300410
+    },
+    {
+      "time_bin": "2017-05-22",
+      "path": "weeks/2017-05-22.json",
+      "row_count": 2516,
+      "bytes": 312338
+    },
+    {
+      "time_bin": "2017-05-29",
+      "path": "weeks/2017-05-29.json",
+      "row_count": 2464,
+      "bytes": 306074
+    },
+    {
+      "time_bin": "2017-06-05",
+      "path": "weeks/2017-06-05.json",
+      "row_count": 2459,
+      "bytes": 305331
+    },
+    {
+      "time_bin": "2017-06-12",
+      "path": "weeks/2017-06-12.json",
+      "row_count": 2310,
+      "bytes": 287149
+    },
+    {
+      "time_bin": "2017-06-19",
+      "path": "weeks/2017-06-19.json",
+      "row_count": 2124,
+      "bytes": 264037
+    },
+    {
+      "time_bin": "2017-06-26",
+      "path": "weeks/2017-06-26.json",
+      "row_count": 1838,
+      "bytes": 228520
+    },
+    {
+      "time_bin": "2017-07-03",
+      "path": "weeks/2017-07-03.json",
+      "row_count": 1852,
+      "bytes": 229867
+    },
+    {
+      "time_bin": "2017-07-10",
+      "path": "weeks/2017-07-10.json",
+      "row_count": 2376,
+      "bytes": 295264
+    },
+    {
+      "time_bin": "2017-07-17",
+      "path": "weeks/2017-07-17.json",
+      "row_count": 2493,
+      "bytes": 310051
+    },
+    {
+      "time_bin": "2017-07-24",
+      "path": "weeks/2017-07-24.json",
+      "row_count": 2343,
+      "bytes": 291467
+    },
+    {
+      "time_bin": "2017-07-31",
+      "path": "weeks/2017-07-31.json",
+      "row_count": 2176,
+      "bytes": 270652
+    },
+    {
+      "time_bin": "2017-08-07",
+      "path": "weeks/2017-08-07.json",
+      "row_count": 2440,
+      "bytes": 303644
+    },
+    {
+      "time_bin": "2017-08-14",
+      "path": "weeks/2017-08-14.json",
+      "row_count": 2699,
+      "bytes": 335930
+    },
+    {
+      "time_bin": "2017-08-21",
+      "path": "weeks/2017-08-21.json",
+      "row_count": 2766,
+      "bytes": 344255
+    },
+    {
+      "time_bin": "2017-08-28",
+      "path": "weeks/2017-08-28.json",
+      "row_count": 3008,
+      "bytes": 374218
+    },
+    {
+      "time_bin": "2017-09-04",
+      "path": "weeks/2017-09-04.json",
+      "row_count": 3188,
+      "bytes": 396672
+    },
+    {
+      "time_bin": "2017-09-11",
+      "path": "weeks/2017-09-11.json",
+      "row_count": 2990,
+      "bytes": 372389
+    },
+    {
+      "time_bin": "2017-09-18",
+      "path": "weeks/2017-09-18.json",
+      "row_count": 3441,
+      "bytes": 428969
+    },
+    {
+      "time_bin": "2017-09-25",
+      "path": "weeks/2017-09-25.json",
+      "row_count": 3619,
+      "bytes": 450721
+    },
+    {
+      "time_bin": "2017-10-02",
+      "path": "weeks/2017-10-02.json",
+      "row_count": 2846,
+      "bytes": 354294
+    },
+    {
+      "time_bin": "2017-10-09",
+      "path": "weeks/2017-10-09.json",
+      "row_count": 3160,
+      "bytes": 393086
+    },
+    {
+      "time_bin": "2017-10-16",
+      "path": "weeks/2017-10-16.json",
+      "row_count": 2995,
+      "bytes": 372512
+    },
+    {
+      "time_bin": "2017-10-23",
+      "path": "weeks/2017-10-23.json",
+      "row_count": 3052,
+      "bytes": 379949
+    },
+    {
+      "time_bin": "2017-10-30",
+      "path": "weeks/2017-10-30.json",
+      "row_count": 2727,
+      "bytes": 339569
+    },
+    {
+      "time_bin": "2017-11-06",
+      "path": "weeks/2017-11-06.json",
+      "row_count": 2799,
+      "bytes": 348427
+    },
+    {
+      "time_bin": "2017-11-13",
+      "path": "weeks/2017-11-13.json",
+      "row_count": 2849,
+      "bytes": 354700
+    },
+    {
+      "time_bin": "2017-11-20",
+      "path": "weeks/2017-11-20.json",
+      "row_count": 2684,
+      "bytes": 334068
+    },
+    {
+      "time_bin": "2017-11-27",
+      "path": "weeks/2017-11-27.json",
+      "row_count": 2435,
+      "bytes": 303326
+    },
+    {
+      "time_bin": "2017-12-04",
+      "path": "weeks/2017-12-04.json",
+      "row_count": 2052,
+      "bytes": 255440
+    },
+    {
+      "time_bin": "2017-12-11",
+      "path": "weeks/2017-12-11.json",
+      "row_count": 2005,
+      "bytes": 249385
+    },
+    {
+      "time_bin": "2017-12-18",
+      "path": "weeks/2017-12-18.json",
+      "row_count": 1679,
+      "bytes": 209142
+    },
+    {
+      "time_bin": "2017-12-25",
+      "path": "weeks/2017-12-25.json",
+      "row_count": 1661,
+      "bytes": 206763
+    },
+    {
+      "time_bin": "2018-01-01",
+      "path": "weeks/2018-01-01.json",
+      "row_count": 1508,
+      "bytes": 187695
+    },
+    {
+      "time_bin": "2018-01-08",
+      "path": "weeks/2018-01-08.json",
+      "row_count": 1693,
+      "bytes": 210588
+    },
+    {
+      "time_bin": "2018-01-15",
+      "path": "weeks/2018-01-15.json",
+      "row_count": 2013,
+      "bytes": 250611
+    },
+    {
+      "time_bin": "2018-01-22",
+      "path": "weeks/2018-01-22.json",
+      "row_count": 1823,
+      "bytes": 226861
+    },
+    {
+      "time_bin": "2018-01-29",
+      "path": "weeks/2018-01-29.json",
+      "row_count": 2033,
+      "bytes": 252764
+    },
+    {
+      "time_bin": "2018-02-05",
+      "path": "weeks/2018-02-05.json",
+      "row_count": 1900,
+      "bytes": 236210
+    },
+    {
+      "time_bin": "2018-02-12",
+      "path": "weeks/2018-02-12.json",
+      "row_count": 1986,
+      "bytes": 246855
+    },
+    {
+      "time_bin": "2018-02-19",
+      "path": "weeks/2018-02-19.json",
+      "row_count": 2131,
+      "bytes": 265182
+    },
+    {
+      "time_bin": "2018-02-26",
+      "path": "weeks/2018-02-26.json",
+      "row_count": 2099,
+      "bytes": 260827
+    },
+    {
+      "time_bin": "2018-03-05",
+      "path": "weeks/2018-03-05.json",
+      "row_count": 2210,
+      "bytes": 275073
+    },
+    {
+      "time_bin": "2018-03-12",
+      "path": "weeks/2018-03-12.json",
+      "row_count": 2340,
+      "bytes": 291236
+    },
+    {
+      "time_bin": "2018-03-19",
+      "path": "weeks/2018-03-19.json",
+      "row_count": 2109,
+      "bytes": 262576
+    },
+    {
+      "time_bin": "2018-03-26",
+      "path": "weeks/2018-03-26.json",
+      "row_count": 2275,
+      "bytes": 283602
+    },
+    {
+      "time_bin": "2018-04-02",
+      "path": "weeks/2018-04-02.json",
+      "row_count": 2276,
+      "bytes": 283357
+    },
+    {
+      "time_bin": "2018-04-09",
+      "path": "weeks/2018-04-09.json",
+      "row_count": 2969,
+      "bytes": 369803
+    },
+    {
+      "time_bin": "2018-04-16",
+      "path": "weeks/2018-04-16.json",
+      "row_count": 3663,
+      "bytes": 456667
+    },
+    {
+      "time_bin": "2018-04-23",
+      "path": "weeks/2018-04-23.json",
+      "row_count": 3763,
+      "bytes": 468632
+    },
+    {
+      "time_bin": "2018-04-30",
+      "path": "weeks/2018-04-30.json",
+      "row_count": 3555,
+      "bytes": 442491
+    },
+    {
+      "time_bin": "2018-05-07",
+      "path": "weeks/2018-05-07.json",
+      "row_count": 3066,
+      "bytes": 381026
+    },
+    {
+      "time_bin": "2018-05-14",
+      "path": "weeks/2018-05-14.json",
+      "row_count": 3317,
+      "bytes": 412284
+    },
+    {
+      "time_bin": "2018-05-21",
+      "path": "weeks/2018-05-21.json",
+      "row_count": 3352,
+      "bytes": 416835
+    },
+    {
+      "time_bin": "2018-05-28",
+      "path": "weeks/2018-05-28.json",
+      "row_count": 3037,
+      "bytes": 378056
+    },
+    {
+      "time_bin": "2018-06-04",
+      "path": "weeks/2018-06-04.json",
+      "row_count": 2919,
+      "bytes": 362848
+    },
+    {
+      "time_bin": "2018-06-11",
+      "path": "weeks/2018-06-11.json",
+      "row_count": 2535,
+      "bytes": 315086
+    },
+    {
+      "time_bin": "2018-06-18",
+      "path": "weeks/2018-06-18.json",
+      "row_count": 2852,
+      "bytes": 354773
+    },
+    {
+      "time_bin": "2018-06-25",
+      "path": "weeks/2018-06-25.json",
+      "row_count": 2872,
+      "bytes": 357397
+    },
+    {
+      "time_bin": "2018-07-02",
+      "path": "weeks/2018-07-02.json",
+      "row_count": 2347,
+      "bytes": 291552
+    },
+    {
+      "time_bin": "2018-07-09",
+      "path": "weeks/2018-07-09.json",
+      "row_count": 2687,
+      "bytes": 333965
+    },
+    {
+      "time_bin": "2018-07-16",
+      "path": "weeks/2018-07-16.json",
+      "row_count": 2881,
+      "bytes": 358308
+    },
+    {
+      "time_bin": "2018-07-23",
+      "path": "weeks/2018-07-23.json",
+      "row_count": 2951,
+      "bytes": 367227
+    },
+    {
+      "time_bin": "2018-07-30",
+      "path": "weeks/2018-07-30.json",
+      "row_count": 3117,
+      "bytes": 387688
+    },
+    {
+      "time_bin": "2018-08-06",
+      "path": "weeks/2018-08-06.json",
+      "row_count": 2867,
+      "bytes": 356721
+    },
+    {
+      "time_bin": "2018-08-13",
+      "path": "weeks/2018-08-13.json",
+      "row_count": 2956,
+      "bytes": 367659
+    },
+    {
+      "time_bin": "2018-08-20",
+      "path": "weeks/2018-08-20.json",
+      "row_count": 3027,
+      "bytes": 376692
+    },
+    {
+      "time_bin": "2018-08-27",
+      "path": "weeks/2018-08-27.json",
+      "row_count": 3380,
+      "bytes": 421002
+    },
+    {
+      "time_bin": "2018-09-03",
+      "path": "weeks/2018-09-03.json",
+      "row_count": 3296,
+      "bytes": 411002
+    },
+    {
+      "time_bin": "2018-09-10",
+      "path": "weeks/2018-09-10.json",
+      "row_count": 3161,
+      "bytes": 393558
+    },
+    {
+      "time_bin": "2018-09-17",
+      "path": "weeks/2018-09-17.json",
+      "row_count": 3629,
+      "bytes": 452487
+    },
+    {
+      "time_bin": "2018-09-24",
+      "path": "weeks/2018-09-24.json",
+      "row_count": 3505,
+      "bytes": 436282
+    },
+    {
+      "time_bin": "2018-10-01",
+      "path": "weeks/2018-10-01.json",
+      "row_count": 3725,
+      "bytes": 463726
+    },
+    {
+      "time_bin": "2018-10-08",
+      "path": "weeks/2018-10-08.json",
+      "row_count": 3411,
+      "bytes": 424597
+    },
+    {
+      "time_bin": "2018-10-15",
+      "path": "weeks/2018-10-15.json",
+      "row_count": 3773,
+      "bytes": 470222
+    },
+    {
+      "time_bin": "2018-10-22",
+      "path": "weeks/2018-10-22.json",
+      "row_count": 3857,
+      "bytes": 480569
+    },
+    {
+      "time_bin": "2018-10-29",
+      "path": "weeks/2018-10-29.json",
+      "row_count": 3683,
+      "bytes": 458659
+    },
+    {
+      "time_bin": "2018-11-05",
+      "path": "weeks/2018-11-05.json",
+      "row_count": 3626,
+      "bytes": 451608
+    },
+    {
+      "time_bin": "2018-11-12",
+      "path": "weeks/2018-11-12.json",
+      "row_count": 3136,
+      "bytes": 390772
+    },
+    {
+      "time_bin": "2018-11-19",
+      "path": "weeks/2018-11-19.json",
+      "row_count": 3459,
+      "bytes": 430208
+    },
+    {
+      "time_bin": "2018-11-26",
+      "path": "weeks/2018-11-26.json",
+      "row_count": 3174,
+      "bytes": 395366
+    },
+    {
+      "time_bin": "2018-12-03",
+      "path": "weeks/2018-12-03.json",
+      "row_count": 2972,
+      "bytes": 369887
+    },
+    {
+      "time_bin": "2018-12-10",
+      "path": "weeks/2018-12-10.json",
+      "row_count": 2523,
+      "bytes": 314129
+    },
+    {
+      "time_bin": "2018-12-17",
+      "path": "weeks/2018-12-17.json",
+      "row_count": 2531,
+      "bytes": 315237
+    },
+    {
+      "time_bin": "2018-12-24",
+      "path": "weeks/2018-12-24.json",
+      "row_count": 2367,
+      "bytes": 294643
+    },
+    {
+      "time_bin": "2018-12-31",
+      "path": "weeks/2018-12-31.json",
+      "row_count": 2,
+      "bytes": 228
+    }
+  ]
+}

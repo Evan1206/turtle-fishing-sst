@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="海龜出現位置與漁船作業強度的歷史空間關聯互動展示。"
+    >
+    <title>北太平洋海龜 × 漁業活動</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQ3KJMMFQSHh6aLZ4BYpLDumgEAu5LA="
+      crossorigin=""
+    >
+    <link rel="stylesheet" href="./style.css?v=2">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="title-group">
+        <div class="mascot" aria-hidden="true">
+          <span class="mascot-shell">🐢</span>
+          <span class="mascot-wave">〰</span>
+        </div>
+        <div>
+        <p class="eyebrow">2017–2018 歷史資料快照 · 北太平洋</p>
+        <h1>北太平洋海龜 × 漁業活動</h1>
+        <p class="intro">
+          逐週探索漁船作業強度與海龜出現位置的空間關係。
+          這是固定歷史快照，不是即時追蹤系統。
+        </p>
+        </div>
+      </div>
+      <div class="snapshot-badge" aria-label="資料狀態">
+        <span class="status-dot" aria-hidden="true"></span>
+        已接入審查資料
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="map-card" aria-labelledby="map-title">
+        <div class="map-toolbar">
+          <div>
+            <p class="section-kicker">每週空間分布</p>
+            <h2 id="map-title">漁船作業熱區與海龜定位</h2>
+          </div>
+          <div class="layer-controls" aria-label="圖層顯示控制">
+            <label>
+              <input id="toggle-fishing" type="checkbox" checked>
+              <span class="swatch swatch-fishing" aria-hidden="true"></span>
+              漁船作業
+            </label>
+            <label>
+              <input id="toggle-turtles" type="checkbox" checked>
+              <span class="swatch swatch-turtle" aria-hidden="true"></span>
+              海龜定位
+            </label>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-copy">
+            <label for="week-slider">觀察週次</label>
+            <output id="week-label" for="week-slider">—</output>
+          </div>
+          <input id="week-slider" type="range" min="0" max="0" step="1" value="0">
+          <div class="timeline-ends" aria-hidden="true">
+            <span id="week-start">—</span>
+            <span id="week-end">—</span>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <div
+            id="map"
+            role="application"
+            aria-label="北太平洋漁船作業強度與海龜定位互動地圖"
+          ></div>
+          <div class="legend" aria-label="漁船作業強度圖例">
+            <div class="legend-heading">
+              <strong><span aria-hidden="true">⛵</span> 漁船作業</strong>
+              <span>小時／格／週 · 對數色階</span>
+            </div>
+            <div class="legend-ramp" aria-hidden="true"></div>
+            <div class="legend-scale">
+              <span>低<br><b id="legend-min">0</b></span>
+              <span>高<br><b id="legend-max">0</b></span>
+            </div>
+            <div class="legend-turtle">
+              <span class="turtle-dot" aria-hidden="true">🐢</span>
+              海龜定位資料（大小＝點數）
+            </div>
+          </div>
+          <div id="loading-state" class="loading-state" role="status">
+            <div class="loading-boat" aria-hidden="true">⛵</div>
+            <strong>小船正在載入歷史資料…</strong>
+            <span>請稍候，正在整理每週網格。</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="results-card" aria-labelledby="results-title">
+        <p class="section-kicker">空間關聯摘要</p>
+        <h2 id="results-title">Spearman 檢定</h2>
+
+        <div class="metric">
+          <span>相關係數 ρ</span>
+          <strong id="correlation">—</strong>
+        </div>
+        <div class="metric-grid">
+          <div>
+            <span>p 值</span>
+            <strong id="p-value">—</strong>
+          </div>
+          <div>
+            <span>格週樣本</span>
+            <strong id="n-cells">—</strong>
+          </div>
+          <div>
+            <span>追蹤個體</span>
+            <strong id="n-individuals">—</strong>
+          </div>
+        </div>
+
+        <div class="conclusion">
+          <span>分析結論</span>
+          <p id="conclusion-text">—</p>
+          <p id="effect-note" class="effect-note">—</p>
+        </div>
+
+        <div class="caveat">
+          <h3><span aria-hidden="true">🐢</span> 小龜提醒你</h3>
+          <p>
+            <strong>相關不等於因果。</strong>
+            空間重疊或迴避只能描述關聯，不能證明漁船活動造成海龜位置改變。
+          </p>
+          <p>
+            正式分析樣本來自個位數隻追蹤個體，結果不宜直接推論至整個海龜族群。
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>資料來源：Movebank、Global Fishing Watch。固定歷史快照，非即時定位。</p>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js?v=2"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.env
+data/
+outputs/*
+!outputs/web/
+outputs/web/grid.json
+**/__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/
+*.egg-info/

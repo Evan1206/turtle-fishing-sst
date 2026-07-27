@@ -1,0 +1,7 @@
+{
+  "correlation": -0.1091864723470163,
+  "p_value": 0.0,
+  "n_cells": 267580,
+  "n_individuals": 8,
+  "conclusion_text": "結論：漁船作業小時與海龜定位點呈現統計顯著的負空間關聯（Spearman ρ=-0.1092, p<1e-300）；此分析不代表因果關係。"
+}
