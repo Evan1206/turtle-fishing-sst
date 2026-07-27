@@ -694,6 +694,155 @@ h2 {
   margin-bottom: 0;
 }
 
+.reading-guide {
+  width: min(1440px, calc(100% - 48px));
+  margin: 20px auto 0;
+}
+
+.reading-guide details {
+  overflow: hidden;
+  border: 1px solid #b7d3f6;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 12px 34px rgb(11 11 11 / 7%);
+}
+
+.reading-guide summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 17px 20px;
+  color: #104281;
+  background:
+    linear-gradient(100deg, rgb(205 226 251 / 65%), rgb(233 248 245 / 65%));
+  cursor: pointer;
+  list-style: none;
+}
+
+.reading-guide summary::-webkit-details-marker {
+  display: none;
+}
+
+.reading-guide summary:focus-visible {
+  outline: 3px solid rgb(57 135 229 / 30%);
+  outline-offset: -4px;
+}
+
+.guide-mascot {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid #9ec5f4;
+  border-radius: 50%;
+  background: #fcfcfb;
+  box-shadow: 0 5px 13px rgb(42 120 214 / 14%);
+  font-size: 1.45rem;
+}
+
+.reading-guide summary small,
+.reading-guide summary strong {
+  display: block;
+}
+
+.reading-guide summary small {
+  margin-bottom: 1px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.reading-guide summary strong {
+  font-family: "Trebuchet MS", system-ui, sans-serif;
+  font-size: 1.05rem;
+}
+
+.guide-action {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+.guide-action::after {
+  content: "＋";
+  font-size: 1rem;
+  transition: transform 180ms ease;
+}
+
+.reading-guide details[open] .guide-action::after {
+  transform: rotate(45deg);
+}
+
+.guide-content {
+  padding: 20px;
+  border-top: 1px solid #c8e3e0;
+}
+
+.guide-intro {
+  max-width: 780px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.guide-grid article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #fff;
+}
+
+.guide-grid h3 {
+  margin-bottom: 5px;
+  font-size: 0.88rem;
+}
+
+.guide-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.guide-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.guide-grid-icon,
+.guide-time-icon {
+  color: #184f95;
+  background: #e7f2ff;
+}
+
+.guide-turtle-icon {
+  border: 1px solid #f4b0ad;
+  border-radius: 50%;
+  background: #fff4f3;
+}
+
+.guide-rho-icon {
+  color: #0c665c;
+  background: #e9f8f5;
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+}
+
 .leaflet-tooltip {
   padding: 9px 11px;
   border: 1px solid var(--line);
@@ -737,6 +886,7 @@ footer p {
 @media (max-width: 680px) {
   .site-header,
   .page-shell,
+  .reading-guide,
   footer {
     width: min(100% - 24px, 1440px);
   }
@@ -787,5 +937,22 @@ footer p {
     right: 10px;
     bottom: 10px;
     width: 170px;
+  }
+
+  .guide-action {
+    font-size: 0;
+  }
+
+  .guide-action::after {
+    font-size: 1rem;
+  }
+
+  .guide-content,
+  .reading-guide summary {
+    padding-inline: 15px;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
   }
 }

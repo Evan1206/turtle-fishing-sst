@@ -142,6 +142,72 @@
       </aside>
     </main>
 
+    <section class="reading-guide" aria-labelledby="reading-guide-title">
+      <details>
+        <summary>
+          <span class="guide-mascot" aria-hidden="true">🐢</span>
+          <span>
+            <small>第一次看這張地圖？</small>
+            <strong id="reading-guide-title">如何判讀</strong>
+          </span>
+          <span class="guide-action" aria-hidden="true">展開說明</span>
+        </summary>
+
+        <div class="guide-content">
+          <p class="guide-intro">
+            小龜帶你用四個重點讀懂畫面。這裡解釋的是資料怎麼編碼，
+            與右側的因果免責提醒是兩個不同區塊。
+          </p>
+
+          <div class="guide-grid">
+            <article>
+              <span class="guide-icon guide-grid-icon" aria-hidden="true">▦</span>
+              <div>
+                <h3>一格代表 0.25° × 1 週</h3>
+                <p>
+                  藍色深淺代表<strong>那一格、那一週</strong>的漁船作業小時。
+                  它不是船隻數量，也不是整個研究期間累計的作業量。
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span class="guide-icon guide-turtle-icon" aria-hidden="true">🐢</span>
+              <div>
+                <h3>海龜大小代表定位次數</h3>
+                <p>
+                  圖示愈大，表示同一格同一週收到的 GPS／Argos
+                  <strong>定位點愈多</strong>；不是海龜數量，也不是體型或年齡。
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span class="guide-icon guide-rho-icon" aria-hidden="true">ρ</span>
+              <div>
+                <h3>ρ 是排序相關，不是百分比</h3>
+                <p>
+                  正負號表示關聯方向，絕對值表示關聯強弱。ρ 接近 0
+                  代表關聯很弱，即使統計上顯著；它不是「重疊了多少 %」。
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span class="guide-icon guide-time-icon" aria-hidden="true">◷</span>
+              <div>
+                <h3>滑桿是在切換每週快照</h3>
+                <p>
+                  每個位置都是一個獨立計算的<strong>歷史靜態週次</strong>。
+                  滑桿不會自動前進，也不是動畫播放。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </details>
+    </section>
+
     <footer>
       <p>資料來源：Movebank、Global Fishing Watch。固定歷史快照，非即時定位。</p>
     </footer>
