@@ -299,11 +299,44 @@
          (b) 至少改成欄位式（columnar）JSON 而非逐列重複鍵名的物件陣列，
          大幅縮小檔案。不管哪種，確認靜態託管平台會用 gzip/brotli 壓縮也有幫助，
          但不能只靠壓縮，26.7 萬列資料本來就不該一次全部載入只顯示一週的畫面。
-- [ ] **模組 F（網站）剩餘待辦**：
-      1. **Codex 修上面兩個 bug**（地圖渲染、grid.json 過大），修完須在瀏覽器
-         實際驗證後才回報完成。
-      2. **仍阻塞、需人明確同意才做**：把網站部署到公開網址。這兩個 bug 修好、
-         且經人重新確認之前，**不會發布上網**。
+- [x] 2026-07-27 構思層審查兩個 bug 修復：**PASS**。實際重開瀏覽器驗證（不只看
+      程式碼）：地圖磚塊正常拼接、熱區色塊與海龜圖示都正常渲染；`app.js` 改為
+      先抓輕量 `weeks.json` manifest，滑桿移動時才即需即抓對應那一週的小檔案
+      （`weekCache` 做快取避免重複抓取），`GRID_DEG` 也已從 `src.config` 動態帶入
+      `weeks.json` 的 `grid_deg` 欄位，不再另外寫死複製一份；地圖渲染 bug用
+      `map.invalidateSize()`（初次資料就緒後 + 加了 `ResizeObserver` 持續監聽版面
+      尺寸變化）修正，比原本建議的做法更周全。
+      **一個順手處理的殘留問題**：`export_web_data.py` 仍會另外輸出一份完整的
+      `outputs/web/grid.json`（33MB），拆成逐週檔案後這份已經沒有任何地方在用，
+      放著會不必要地塞大小進部署內容。這次沒有請 Codex 改程式碼，而是用
+      `.gitignore` 直接排除這個檔案（`outputs/web/grid.json` 明確排除，
+      `outputs/web/` 其餘檔案維持追蹤），不影響 export_web_data.py 本身的邏輯。
+      之後 Codex 若要順手清掉這段沒人用的輸出程式碼也可以，非必要。
+- [x] **2026-07-27 網站已發布上線**：
+      `https://evan1206.github.io/turtle-fishing-sst/web/`（GitHub Pages，
+      repo `Evan1206/turtle-fishing-sst`，public，master 分支根目錄）。
+      部署前處理事項：
+      - 發現 `.gitignore` 原本整個排除 `outputs/`，會導致網站運作必需的
+        `outputs/web/summary.json`、`weeks.json`、`weeks/*.json` 全部沒有
+        進版本控制、部署後網站會顯示「資料載入失敗」——已修正為
+        `outputs/*` + `!outputs/web/`（`outputs/figures`、`outputs/tables`
+        等可重算產物維持排除）。
+      - 部署前掃過所有將被追蹤的原始碼檔案，確認沒有硬編碼的 GFW/Movebank
+        憑證字串；`.env` 本身仍在排除清單內。
+      - 部署完成後**直接對公開網址重新截圖驗證**，畫面與本機測試一致
+        （地圖、熱區、海龜圖示、Spearman 結果面板皆正常），不是只憑
+        HTTP 200 就判定成功。
+      - repo 是這次才用 `git init` + `gh repo create` 新建的（先前這個資料夾
+        沒有版本控制），使用者已在此之前用 `gh auth` 登入帳號 `Evan1206`。
+- [x] **2026-07-27 修正部署後的根網址陷阱**：人回報打開頁面「完全沒有圖示只有
+      一堆程式碼」——查出來是 GitHub Pages 預設用 Jekyll 處理，沒有根目錄
+      `index.html` 時會把 `README.md` 自動轉成首頁；README 裡有好幾段
+      PowerShell 安裝指令的程式碼區塊，Jekyll 渲染出來看起來就是「一堆程式碼」，
+      沒有地圖、沒有海龜——**網站本體其實沒壞，是根網址被 Jekyll 蓋掉了**。
+      修法：新增根目錄 `.nojekyll`（停用 Jekyll 處理）與根目錄 `index.html`
+      （0 秒 meta-refresh 導到 `./web/`，並附一個手動連結防止導轉失敗）。
+      推上去、等 Pages 重新 build 後，**對根網址重新截圖驗證**，確認會自動
+      跳轉到正確的儀表板畫面，跟 `/web/` 顯示的內容一致。
 
 **MVP 邊界**：模組 A、B、D、E（無 SST）。目標產出：一張疊圖 + 一個 Spearman 結論。
 模組 F（網站）是 MVP 之外的發布層，見上方版本邊界說明與 spec.md 第 6 節。
